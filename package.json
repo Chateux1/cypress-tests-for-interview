@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "task2": "cypress run --browser chrome --headed --spec 'cypress/specs/task2.spec.js'",
-    "task3": "cypress run --browser chrome --headed --spec 'cypress/specs/task3.spec.js'"
+    "task2-alt": "cypress run --browser chrome --headed --spec 'cypress/specs/task2-alt.spec.js'",
+    "task3": "cypress run --browser chrome --headed --spec 'cypress/specs/task3.spec.js'",
+    "task3-alt": "cypress run --browser chrome --headed --spec 'cypress/specs/task3-alt.spec.js'"
   },
   "author": "",
   "license": "ISC",
