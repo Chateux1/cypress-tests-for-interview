@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run": "cypress run",
-    "task2": "cypress run --browser chrome --headed --spec 'cypress/tests/task2.spec.js'",
-    "task3": "cypress run --browser chrome --headed --spec 'cypress/tests/task3.spec.js'",
-    "task22": "npx cypress run --browser chrome --headed --spec 'cypress/integration/task2.spec.js'"
+    "task2": "cypress run --browser chrome --headed --spec 'cypress/specs/task2.spec.js'",
+    "task3": "cypress run --browser chrome --headed --spec 'cypress/specs/task3.spec.js'"
   },
   "author": "",
   "license": "ISC",
