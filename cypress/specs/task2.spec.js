@@ -14,8 +14,8 @@ describe('GlobalSQA page', () => {
         demoSite.getSearchBarContent().should( contents => {
             const value = contents.val()
 
-            expect(value).to.be.not.empty
-            expect(isNaN(value)).to.be.false
+            expect(value).to.be.not.empty;
+            expect(isNaN(value)).to.be.false;
         })
     })
 })
