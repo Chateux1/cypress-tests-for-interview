@@ -7,12 +7,16 @@
     "task2": "cypress run --browser chrome --headed --spec 'cypress/specs/task2.spec.js'",
     "task2-alt": "cypress run --browser chrome --headed --spec 'cypress/specs/task2-alt.spec.js'",
     "task3": "cypress run --browser chrome --headed --spec 'cypress/specs/task3.spec.js'",
-    "task3-alt": "cypress run --browser chrome --headed --spec 'cypress/specs/task3-alt.spec.js'"
+    "task3-alt": "cypress run --browser chrome --headed --spec 'cypress/specs/task3-alt.spec.js'",
+    "task4": "mocha --timeout 30000 appium/tests/task4"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "appium": "^1.21.0",
     "chai": "^4.3.4",
-    "cypress": "^8.4.0"
+    "cypress": "^8.4.0",
+    "mocha": "^9.1.1",
+    "webdriverio": "^7.12.5"
   }
 }
