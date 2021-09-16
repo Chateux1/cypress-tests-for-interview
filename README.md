@@ -1,7 +1,50 @@
 # Solutions for practical task by TeleSoftas
 This document contains solutions for the tasks and/or any other information that might be useful for the review process.
-## Task 1
-TODO
+## Task 1. Meditation Timer & Log App
+I haven't really used the app a lot, just downloaded it and tried to click through it as much as possible. There could be suggestions regarding the function of the app, but I didn't try to actually use it.
+
+I used the app on an Android 10 device with MIUI 12 
+### Suggestions
+Locations where the app could be improved:
+- Design. Meditation in my mind associates with minimalism. I think a design is very important for this type of app and minimalism associates with calmness for me. Here are some more specific point regarding the design:
+    - Swipping left/right in various scenarios
+        - Swipe left to go back to session settings
+        - Swipe right to finish session
+        - Swipe left to leave settings page
+        - etc.
+    - Combining Goal and Profile pages
+        - There is a link to Goal page in the Profile page and also the same link is present in the main screen
+    - Two columns of circle buttons
+        - Timer selection in this manner seems odd. Not sure whether i have a better idea for that. Maybe just have only the custom option
+        - For some of the sounds there is scrolling which could be avoided if space would be used more effitiently
+        - Maybe I'm just not a fan of circles :D
+    - Maybe there could be an option for simple/advanced flow in the settings where the simple one would have less of the options present
+- On a phone with phone wide dark theme, the colors of the app are very odd. Selecting a night theme seems to invert some of the colors resulting in a disturbing combination
+- Activity diagram
+    - It rotates to landscape automatically which seems strange. I get the idea, that it is better to see the graph in landscape, but I would expect to have both options
+    - The landscape view is available only on one side, it should be possible to have landscape when the phone is tilted to either side
+- English
+    - Descriptions used in the tooltips in settings and other locations could be reviewed for styling
+    - There are some grammatical mistakes as well (capital letters in the middle of a sentence, the/a usage)
+### Bugs
+Here a two random bugs that I have found :)
+- Bug 1
+    - Click 'New Session'
+    - Make a change in settings
+    - Click 'Save to Presets'
+    - Enter a title and click 'Done'
+    - Click 'Save to Presets'
+    - Go back to main screen
+    - Click 'Load Meditation'
+    - Result: preset is not there
+- Bug 2
+    - Click 'New Session'
+    - Click 'Duration' for editing
+    - Click 'Custom'
+    - Scroll minutes to 59
+    - Scroll minutes to 0
+    - Result: 'Done' button is not visible
+
 ## Script task (task 2 and task 3)
 ### Tools
 For the following tasks I have decided to use the Cypress framework. Some of the reasoning for this decision:
