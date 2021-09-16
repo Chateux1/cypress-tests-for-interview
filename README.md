@@ -1,4 +1,4 @@
-# Solutions for practical task by TeleSoftas
+# Solutions for Practical Task by TeleSoftas
 This document contains solutions for the tasks and/or any other information that might be useful for the review process.
 ## Task 1. Meditation Timer & Log App
 I haven't really used the app a lot, just downloaded it and tried to click through it as much as possible. There could be suggestions regarding the function of the app, but I didn't try to actually use it.
