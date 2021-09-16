@@ -15,7 +15,7 @@ I am more used to writing e2e tests using C# and Selenium and Javascript acts a 
     - I found a workaround for storing a value with can be seen in use in both task 2 and task 3
 - I have more experience with POM and am used to it
     - In Cypress it is sometimes hard to implement a POM as separation between POM methods and assertions for tests is not possible
- ~~TODO write a different implementation of the scripts avoid POM~~
+ ~~TODO write a different implementation of the scripts avoiding POM~~
 - Cypress does not natively support Iframes
     - I found a solution which uses custom Cypress Commands but it was not a stable one
     - I found another solution with uses custom functions and this seems to be working consistently
@@ -61,6 +61,7 @@ npm run task4
 ```
 ### Scenario
 The scenario can be split into two parts, one for the tutorial in the app and the second for the scenario provided in the gif.
+
 Scenario for the tutorial:
 - First screen
     - Given: the app is in the first screen (assert text)
@@ -68,6 +69,7 @@ Scenario for the tutorial:
     - Then: wait a bit (1000 ms) for screen to change (The wait was used because the buttons are the same elements on all screens and i did not find a better way of ensuring that the screen has changed. The waiting time could be lowered, but this still is not an ideal solution)
 - 2nd/3rd/4th screens
     - Basically repeat the same just assert different texts
+
 Scenario from the gif:
 - Click on first news provider
     - Given: news provider list is present
