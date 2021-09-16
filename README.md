@@ -6,12 +6,12 @@ I haven't really used the app a lot, just downloaded it and tried to click throu
 I used the app on an Android 10 device with MIUI 12 
 ### Suggestions
 Locations where the app could be improved:
-- Design. Meditation in my mind associates with minimalism. I think a design is very important for this type of app and minimalism associates with calmness for me. Here are some more specific point regarding the design:
-    - Swipping left/right in various scenarios
+- Design. Meditation in my mind associates with minimalism. I think a design is very important for this type of app and minimalism associates with calmness for me. Here are some more specific points regarding the design:
+    - Swipping left/right in various scenarios:
         - Swipe left to go back to session settings
         - Swipe right to finish session
         - Swipe left to leave settings page
-        - etc.
+        - Etc.
     - Combining Goal and Profile pages
         - There is a link to Goal page in the Profile page and also the same link is present in the main screen
     - Two columns of circle buttons
@@ -27,7 +27,7 @@ Locations where the app could be improved:
     - Descriptions used in the tooltips in settings and other locations could be reviewed for styling
     - There are some grammatical mistakes as well (capital letters in the middle of a sentence, the/a usage)
 ### Bugs
-Here a two random bugs that I have found :)
+Here are two random bugs that I have found :)
 - Bug 1
     - Click 'New Session'
     - Make a change in settings
@@ -45,7 +45,7 @@ Here a two random bugs that I have found :)
     - Scroll minutes to 0
     - Result: 'Done' button is not visible
 
-## Script task (task 2 and task 3)
+## Script Tasks (Task 2 and Task 3)
 ### Tools
 For the following tasks I have decided to use the Cypress framework. Some of the reasoning for this decision:
 - I wanted to use a JavaScript framework because I want to gain more experience with this language
@@ -55,13 +55,13 @@ For the following tasks I have decided to use the Cypress framework. Some of the
 ### Issues
 I am more used to writing e2e tests using C# and Selenium and Javascript acts a bit differently. Moreover Cypress itself seems to be a bit different compared to Protractor. It might be my limited knowledge of Javascript that led me to the following issues:
 - A value cannot be returned from a method for further use
-    - I found a workaround for storing a value with can be seen in use in both task 2 and task 3
-- I have more experience with POM and am used to it
-    - In Cypress it is sometimes hard to implement a POM as separation between POM methods and assertions for tests is not possible
+    - I found a workaround to use Cypres Aliases for storing a value which can be seen in use for both task 2 and task 3
+- I have more experience with POM and am more used to it
+    - In Cypress it is sometimes hard to implement a POM because separation between POM methods and assertions for tests sometimes is not possible
  ~~TODO write a different implementation of the scripts avoiding POM~~
 - Cypress does not natively support Iframes
     - I found a solution which uses custom Cypress Commands but it was not a stable one
-    - I found another solution with uses custom functions and this seems to be working consistently
+    - I found another solution which uses custom functions and this seems to be working consistently
 ### Task 2
 Some of the previously mentioned issues arose because of how the task is given. Following the task word by word allows to create a script that has no assertions which in my understanding is a bad test. In the original implementation i have added an assert of what was entered to the search field, but asserted the value to be not empty and for it to be a number which seems strange. Original solution can be launched with the following command:
 ```
@@ -81,7 +81,7 @@ The last point of this task (...read and print the text...) in my mind translate
 npm run task3
 ```
 
-~~TODO In the alternative implementation of task 3 I will not store the value but just get it and print it. I will assert the value for the test to have an assert at the end. I will try to find a way to hide the errors that can be seen in the console when visiting the page as they are not relevant for the provided test case and just look not nice and misleading.~~
+~~TODO In the alternative implementation of task 3 I will not store the value but just get it and print it. I will assert the value so that the test has an assert at the end. I will try to find a way to hide the errors that can be seen in the console when visiting the page as they are not relevant for the provided test case and just look not nice and misleading.~~
 
 In the alternative implementation the value is read and stored in **this context** although this needs arrow function to be replaced by regular functions. Assertion of the text was not implemented. Hiding of errors in the console was not implemented as an old solution that I have found was deprecated since Cypress version 6. However the errors might be due to my home network setup (Pi-hole is blocking some domains...). Alternative solution can be launched with the following command:
 ```
