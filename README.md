@@ -45,5 +45,45 @@ In the alternative implementation the value is read and stored in **this context
 npm run task3-alt
 ```
 
-## Extra task
-TODO
+## Task 4
+### Setup
+For this task the following setup was used:
+- Appium
+- Android Studio (for virtual device)
+    - Android version: 8
+- WebdriverIO
+- Mocha 
+- Chai 
+
+To be able to run the tests, an Appium server needs to be running and a virtual device (name can be found in the configuration) needs to be running. Then the test can be launched with the following command:
+```
+npm run task4
+```
+### Scenario
+The scenario can be split into two parts, one for the tutorial in the app and the second for the scenario provided in the gif.
+Scenario for the tutorial:
+- First screen
+    - Given: the app is in the first screen (assert text)
+    - When: the button is clicked
+    - Then: wait a bit (1000 ms) for screen to change (The wait was used because the buttons are the same elements on all screens and i did not find a better way of ensuring that the screen has changed. The waiting time could be lowered, but this still is not an ideal solution)
+- 2nd/3rd/4th screens
+    - Basically repeat the same just assert different texts
+Scenario from the gif:
+- Click on first news provider
+    - Given: news provider list is present
+    - When: the first news provider is clicked
+    - Then: the section title should contain the news provider name
+- Add first news article to favorites
+    - Given: the article list is present
+    - When: the first article is marked as a favorite
+    - Then: the first article should be seen marked as favorite (For some reason I am unable to complete this part...)
+- Open favorites
+    - Given: the favorites button is present
+    - When: favorites button is clicked
+    - Then: the section title should contain the word 'Favorites'
+### Issues
+Here are some of the issues i have faced when trying to solve this task:
+- As mentioned in the scenario, I was unable to make an assert, that the favorite button is checked
+- At first I wanted to run this solution on my physical device which has Android version 10. When i tried to use a virtual device with the same version, I was unable to make it work, lowering the version to 8 made everything work smoothly
+- I tried implementing POM for this solution, but was unable to do that. This is probably again due to limited knowledge of Javascript/Mocha and the specifics of how to properly configure everything together. I have left the selectors within the tests fully knowing that this is not the prefered way of structuring a test project
+- I had some difficulties with understanding appActivity/appWaitActivity capabilities and passing the correct values for them for the app to work properly when the tests are running. Also while running during the tests the app has the tutorial section, but when debugging, once the tutorial is finished, it doesn't appear again when the app is relaunched
