@@ -1,7 +1,6 @@
 const webdriverio = require('webdriverio');
 const androidOptions = require('../config/caps').androidOptions;
 const app = require('../config/apps').androidApp;
-const assert = require('chai').assert;
 const expect = require('chai').expect;
 
 androidOptions.capabilities.app = app;
@@ -57,6 +56,6 @@ describe('some tests', function() {
 
         const sectionTitleElement = await client.$('[resource-id="com.example.newsapp:id/toolbar"] android.widget.TextView');
         const sectionTitleText= await sectionTitleElement.getText();
-        assert.strictEqual(sectionTitleText, 'Favorites');
+        expect(sectionTitleText).to.be.equal('Favorites');
     })
 })
